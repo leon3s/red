@@ -53,15 +53,16 @@ int	main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		printf("usage %s uid.\n", av[0]);
+		printf("\x1b[1;31musage %s uid.\x1b[0;00m\n", av[0]);
 		return (0);
 	}
 	char	*loc;
 	if (!(loc = locate(av[1])))
 	{
-		printf("User not connected or wrong username !\n");
+		printf("\x1b[1;31mUser not connected or wrong username !\x1b[0;00m\n");
 		return (0);
 	}
-	printf("%s\n", locate(av[1]));
+	printf("\x1b[1;31m%s\n\x1b[0;00m", loc);
+	free(loc);
 	return (1);
 }

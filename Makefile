@@ -1,5 +1,5 @@
 
-NAME		=	locate-ip-curl
+NAME		=	red
 
 INCLUDES	=	-I includes
 
