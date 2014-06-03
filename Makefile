@@ -7,14 +7,14 @@ SRCPATH		=	srcs/
 
 OBJPATH		=	objs/
 
-SRCS		=	locate.c \
+SRCS		=	main.c \
 				ft_strsplit.c \
 
 SRC		=	$(addprefix $(SRCPATH), $(SRCS))
 
 OBJ		=	$(patsubst $(SRCPATH)%.c, $(OBJPATH)%.o, $(SRC))
 
-CFLAGS		+=	-W -Wall -Wextra -Werror $(INCLUDES)
+CFLAGS		+=	-W -ggdb3 -Wall -Wextra -Werror $(INCLUDES)
 
 CC		=	gcc
 
